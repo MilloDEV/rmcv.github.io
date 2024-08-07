@@ -1,0 +1,215 @@
+/* CSS base */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #002582;
+    color: rgb(255, 255, 255);
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.sidebar ul li a:hover {
+    transform: scale(1.1);
+    color: #000000; /* Cambiar color al hacer zoom */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 270px;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-content section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    margin-left: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    color: #002582;
+    margin-bottom: 20px;
+}
+
+.main-content h2, .main-content h3 {
+    color: #002582;
+}
+
+.main-content p {
+    color: #424549; /* Cambia este color a lo que prefieras para el texto normal */
+    text-align: center;
+}
+
+.dates {
+    font-style: italic;
+    color: #555;
+}
+
+.social-links img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.habilidad-icono {
+    width: 50px;
+    margin: 10px;
+}
+
+.habilidad-icono {
+    width: 50px;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.habilidad-icono:hover {
+    filter: grayscale(0%);
+}
+
+/* Estilos para la lista de cursos */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.course-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.course-list li img.trophy-icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* CSS para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        transform: none;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        margin: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .main-content section {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-links img {
+        width: 25px;
+    }
+
+    .habilidad-icono {
+        width: 30px;
+        margin: 5px;
+    }
+
+    .course-list li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar ul li {
+        margin: 5px 0;
+    }
+
+    .habilidad-icono {
+        width: 20px;
+        margin: 3px;
+    }
+
+    .course-list li {
+        font-size: 0.9em;
+    }
+}
