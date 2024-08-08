@@ -213,3 +213,37 @@ body {
         font-size: 0.9em;
     }
 }
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.skills img {
+    width: 50px;
+    height: 50px;
+}
+
+.skills-message {
+    background-color: #e7eff7;
+    border-left: 4px solid #002f6c;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto 0; /* Modifica el margen superior aquí */
+    text-align: center;
+}
+
+
+.skills-message p {
+    margin: 0;
+}
+
+.skills-message strong {
+    color: #002f6c;
+}
