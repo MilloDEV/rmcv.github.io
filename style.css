@@ -46,7 +46,8 @@ body {
 
 .sidebar ul li a:hover {
     transform: scale(1.1);
-    color: #000000; /* Cambiar color al hacer zoom */
+    color: #000000;
+    /* Cambiar color al hacer zoom */
 }
 
 .profile-pic {
@@ -81,12 +82,14 @@ body {
     margin-bottom: 20px;
 }
 
-.main-content h2, .main-content h3 {
+.main-content h2,
+.main-content h3 {
     color: #002582;
 }
 
 .main-content p {
-    color: #424549; /* Cambia este color a lo que prefieras para el texto normal */
+    color: #424549;
+    /* Cambia este color a lo que prefieras para el texto normal */
     text-align: center;
 }
 
@@ -213,6 +216,7 @@ body {
         font-size: 0.9em;
     }
 }
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -235,7 +239,8 @@ body {
     font-size: 16px;
     color: #333;
     max-width: 800px;
-    margin: 20px auto 0; /* Modifica el margen superior aquí */
+    margin: 20px auto 0;
+    /* Modifica el margen superior aquí */
     text-align: center;
 }
 
@@ -247,3 +252,4 @@ body {
 .skills-message strong {
     color: #002f6c;
 }
+

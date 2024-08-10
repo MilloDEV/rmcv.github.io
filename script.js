@@ -17,7 +17,4 @@ document.querySelectorAll('.sidebar ul li a').forEach(item => {
         item.style.transform = 'scale(1)';
     });
 });
-document.getElementById('menu-btn').addEventListener('click', function() {
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('show');
-});
+
