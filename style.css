@@ -1,7 +1,8 @@
 /* CSS base */
 body {
-    font-family: Calibri, sans-serif;
+    font-family: Times New Roman, sans-serif;
     margin: 0;
+    justify-content: center;
     display: flex;
     height: 100vh;
     overflow-x: hidden;
@@ -87,9 +88,9 @@ body {
     color: #002582;
 }
 
+
 .main-content p {
     color: #424549;
-    /* Cambia este color a lo que prefieras para el texto normal */
     text-align: center;
 }
 
@@ -144,7 +145,7 @@ body {
     margin-right: 10px;
 }
 
-/* CSS para hacer el diseño responsive */
+
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -215,6 +216,11 @@ body {
     .course-list li {
         font-size: 0.9em;
     }
+
+    /* Ocultar el sidebar en móviles */
+    .sidebar {
+        display: none;
+    }
 }
 
 .skills {
@@ -240,7 +246,6 @@ body {
     color: #333;
     max-width: 800px;
     margin: 20px auto 0;
-    /* Modifica el margen superior aquí */
     text-align: center;
 }
 
