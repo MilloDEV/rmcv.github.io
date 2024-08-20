@@ -256,9 +256,9 @@ body.dark-mode .habilidad-icono:hover {
 }
 
 body.dark-mode .skills-message {
-    background-color: #333; /* o cualquier otro color que desees para el fondo */
-    border-left-color: #e07101; /* o cualquier otro color que desees para el borde */
-    color: #fff; /* o cualquier otro color que desees para el texto */
+    background-color: #333; 
+    border-left-color: #e07101; 
+    color: #fff; 
   }
 
 body.dark-mode .skills-message strong {
