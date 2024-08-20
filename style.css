@@ -1,4 +1,4 @@
-/* CSS base */
+/* Estilos base */
 body {
     font-family: Times New Roman, sans-serif;
     margin: 0;
@@ -6,13 +6,41 @@ body {
     display: flex;
     height: 100vh;
     overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    color: #424549;
 }
 
+/* Estilos del botón de cambio de tema */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle button:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilos del contenedor principal */
 .container {
     display: flex;
     width: 100%;
 }
 
+/* Estilos del sidebar */
 .sidebar {
     background-color: #002582;
     color: rgb(255, 255, 255);
@@ -46,9 +74,8 @@ body {
 }
 
 .sidebar ul li a:hover {
-    transform: scale(1.1);
-    color: #000000;
-    /* Cambiar color al hacer zoom */
+    transform: scale(1.2);
+    color: #000000; /* Cambiar color al hacer zoom */
 }
 
 .profile-pic {
@@ -59,6 +86,7 @@ body {
     object-fit: cover;
 }
 
+/* Estilos del contenido principal */
 .main-content {
     flex: 1;
     padding: 20px;
@@ -88,7 +116,6 @@ body {
     color: #002582;
 }
 
-
 .main-content p {
     color: #424549;
     text-align: center;
@@ -113,10 +140,6 @@ body {
 .habilidad-icono {
     width: 50px;
     margin: 10px;
-}
-
-.habilidad-icono {
-    width: 50px;
     filter: grayscale(100%);
     transition: filter 0.5s;
 }
@@ -145,7 +168,104 @@ body {
     margin-right: 10px;
 }
 
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+.skills img {
+    width: 50px;
+    height: 50px;
+}
+
+.skills-message {
+    background-color: #e7eff7;
+    border-left: 4px solid #002f6c;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.skills-message p {
+    margin: 0;
+   
+}
+
+.skills-message strong {
+    color: #002f6c;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #d4d4d4;
+}
+
+body.dark-mode .sidebar {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar ul li a {
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar ul li a:hover {
+    color: #cccccc;
+}
+
+body.dark-mode .main-content {
+    background-color: #2b2b2b;
+}
+body.dark-mode {
+    color: #fff; /* o cualquier otro color que desees para el texto normal */
+  }
+
+body.dark-mode .main-content p {
+    color: #fff; /* o cualquier otro color que desees para el texto normal */
+  }
+
+  body.dark-mode .main-content li {
+    color: #fff; /* o cualquier otro color que desees para el texto normal */
+  }
+
+body.dark-mode .main-content h1, 
+body.dark-mode .main-content h2, 
+body.dark-mode .main-content h3 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .dates {
+    color: #bbbbbb;
+}
+
+body.dark-mode .habilidad-icono {
+    filter: brightness(0.8) grayscale(100%);
+}
+
+body.dark-mode .habilidad-icono:hover {
+    filter: brightness(1) grayscale(0%);
+}
+
+body.dark-mode .skills-message {
+    background-color: #333; /* o cualquier otro color que desees para el fondo */
+    border-left-color: #e07101; /* o cualquier otro color que desees para el borde */
+    color: #fff; /* o cualquier otro color que desees para el texto */
+  }
+
+body.dark-mode .skills-message strong {
+    color: #f0f0f0;
+}
+
+/* Medios responsivos */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -222,39 +342,3 @@ body {
         display: none;
     }
 }
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.skills img {
-    width: 50px;
-    height: 50px;
-}
-
-.skills-message {
-    background-color: #e7eff7;
-    border-left: 4px solid #002f6c;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    color: #333;
-    max-width: 800px;
-    margin: 20px auto 0;
-    text-align: center;
-}
-
-
-.skills-message p {
-    margin: 0;
-}
-
-.skills-message strong {
-    color: #002f6c;
-}
-
