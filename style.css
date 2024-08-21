@@ -1,6 +1,5 @@
-/* Estilos base */
 body {
-    font-family: Times New Roman, sans-serif;
+    font-family: Arial Rounded MT, sans-serif;
     margin: 0;
     justify-content: center;
     display: flex;
@@ -8,9 +7,36 @@ body {
     overflow-x: hidden;
     background-color: rgb(255, 255, 255);
     color: #424549;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Estilos del botón de cambio de tema */
+.download-btn {
+    position: fixed;
+    top: 60px; 
+    right: 20px;
+    z-index: 999;
+}
+
+.download-btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.download-btn button:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.download-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -27,20 +53,25 @@ body {
 .theme-toggle img {
     width: 30px;
     height: 30px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.theme-toggle button:hover img {
-    transform: scale(1.1);
+.theme-toggle img.rotate {
+    transform: rotate(180deg);
+    opacity: 0.5;
 }
 
-/* Estilos del contenedor principal */
+body.dark-mode .theme-toggle img.rotate {
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
 .container {
     display: flex;
     width: 100%;
 }
 
-/* Estilos del sidebar */
+
 .sidebar {
     background-color: #002582;
     color: rgb(255, 255, 255);
@@ -74,8 +105,8 @@ body {
 }
 
 .sidebar ul li a:hover {
-    transform: scale(1.2);
-    color: #000000; /* Cambiar color al hacer zoom */
+    transform: scale(1.3);
+    color: #000000; 
 }
 
 .profile-pic {
@@ -86,7 +117,6 @@ body {
     object-fit: cover;
 }
 
-/* Estilos del contenido principal */
 .main-content {
     flex: 1;
     padding: 20px;
@@ -148,7 +178,6 @@ body {
     filter: grayscale(0%);
 }
 
-/* Estilos para la lista de cursos */
 .course-list {
     list-style-type: none;
     padding: 0;
@@ -196,14 +225,12 @@ body {
 
 .skills-message p {
     margin: 0;
-   
 }
 
 .skills-message strong {
     color: #002f6c;
 }
 
-/* Modo Oscuro */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #d4d4d4;
@@ -219,28 +246,22 @@ body.dark-mode .sidebar ul li a {
 }
 
 body.dark-mode .sidebar ul li a:hover {
-    color: #cccccc;
+    color: #FF8C00; 
 }
 
 body.dark-mode .main-content {
     background-color: #2b2b2b;
 }
-body.dark-mode {
-    color: #fff; /* o cualquier otro color que desees para el texto normal */
-  }
 
-body.dark-mode .main-content p {
-    color: #fff; /* o cualquier otro color que desees para el texto normal */
-  }
-
-  body.dark-mode .main-content li {
-    color: #fff; /* o cualquier otro color que desees para el texto normal */
-  }
+body.dark-mode .main-content p,
+body.dark-mode .main-content li {
+    color: #fff;
+}
 
 body.dark-mode .main-content h1, 
 body.dark-mode .main-content h2, 
 body.dark-mode .main-content h3 {
-    color: #f0f0f0;
+    color: #FF8C00;
 }
 
 body.dark-mode .dates {
@@ -248,7 +269,7 @@ body.dark-mode .dates {
 }
 
 body.dark-mode .habilidad-icono {
-    filter: brightness(0.8) grayscale(100%);
+    filter: brightness(0.9) grayscale(100%);
 }
 
 body.dark-mode .habilidad-icono:hover {
@@ -259,13 +280,12 @@ body.dark-mode .skills-message {
     background-color: #333; 
     border-left-color: #e07101; 
     color: #fff; 
-  }
+}
 
 body.dark-mode .skills-message strong {
     color: #f0f0f0;
 }
 
-/* Medios responsivos */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -319,6 +339,31 @@ body.dark-mode .skills-message strong {
 }
 
 @media (max-width: 480px) {
+    
+    .sidebar {
+        display: none;
+    }
+
+    .download-btn {
+        position: fixed; 
+        bottom: 20px; 
+        right: 5px; 
+    }
+
+    .download-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .main-content section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
     .sidebar {
         flex-direction: column;
         align-items: center;
@@ -337,8 +382,14 @@ body.dark-mode .skills-message strong {
         font-size: 0.9em;
     }
 
-    /* Ocultar el sidebar en móviles */
-    .sidebar {
-        display: none;
+    .skills-message {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
     }
 }
