@@ -1,5 +1,11 @@
+html{
+scroll-behavior: smooth;
+box-sizing: border-box;
+
+}
+
 body {
-    font-family: Arial Rounded MT, sans-serif;
+    font-family: Calisto MT, sans-serif;
     margin: 0;
     justify-content: center;
     display: flex;
@@ -151,7 +157,7 @@ body.dark-mode .theme-toggle img.rotate {
     text-align: center;
 }
 
-.dates {
+.dates{
     font-style: italic;
     color: #555;
 }
@@ -159,6 +165,8 @@ body.dark-mode .theme-toggle img.rotate {
 .social-links img {
     width: 30px;
     margin: 0 10px;
+    border-radius: 45px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .habilidades {
@@ -393,3 +401,17 @@ body.dark-mode .skills-message strong {
         right: 10px;
     }
 }
+
+
+.main-content section {
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .main-content section.animate {
+    transform: translateY(0);
+  }
+  
+  .main-content section:not(.animate) {
+    transform: translateY(20px);
+  }
+
