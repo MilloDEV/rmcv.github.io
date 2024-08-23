@@ -47,3 +47,30 @@ window.addEventListener('scroll', () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const text = "Desarrollador";
+  let i = 0;
+  const speed = 100; // Velocidad de tipeo en milisegundos
+  const displayTime = 3500; // Tiempo en milisegundos que el mensaje estará visible (3.5 segundos)
+  const hideTime = 1500; // Tiempo en milisegundos que el mensaje estará oculto (1.5 segundos)
+
+  function typeWriter() {
+      if (i < text.length) {
+          document.getElementById("typewriter-text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+      } else {
+          setTimeout(hideText, displayTime); // Oculta el mensaje después de displayTime
+      }
+  }
+
+  function hideText() {
+      document.getElementById("typewriter-text").innerHTML = ''; // Limpia el texto
+      i = 0; // Reinicia el índice
+      setTimeout(typeWriter, hideTime); // Muestra el mensaje después de hideTime
+  }
+
+  typeWriter(); // Inicia el efecto de tipo máquina
+});
+
+
