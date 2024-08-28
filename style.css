@@ -55,7 +55,6 @@ body.dark-mode #typewriter-text {
     50% { border-color: #002582; }
 }
 
-
 .download-btn {
     position: fixed;
     top: 60px; 
@@ -122,7 +121,6 @@ body.dark-mode .theme-toggle img.rotate {
  height: 100vh;
     
 }
-
 
 .sidebar {
     background-color: #002582;
@@ -480,4 +478,3 @@ body.dark-mode .skills-message strong {
   .main-content section:not(.animate) {
     transform: translateY(20px);
   }
-
