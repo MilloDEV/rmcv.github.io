@@ -72,3 +72,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   typeWriter(); // Inicia el efecto de tipo máquina
 });
+
