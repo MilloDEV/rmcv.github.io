@@ -3,9 +3,8 @@ scroll-behavior: smooth;
 box-sizing: border-box;
 
 }
-
 body {
-    font-family: Calisto MT, sans-serif;
+    font-family: Verdana;
     margin: 0;
     justify-content: center;
     display: flex;
