@@ -23,12 +23,19 @@ body {
 
 .typewriter {
     overflow: hidden;
-    border-right: .15em solid #002582; 
+    border-right: .15em solid #002582;
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 2.5s steps(12, end); 
-    width: 25ch; 
+    letter-spacing: .10em;
+
+    animation: blinkCursor .7s step-end infinite;
+}
+
+/* Cursor parpadeando */
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #typewriter-text {
@@ -452,8 +459,13 @@ body.dark-mode .skills-message strong {
 
     .course-list li {
         font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
     }
 
+    
     .skills-message {
         font-size: 14px;
         padding: 10px;
