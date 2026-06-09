@@ -1,86 +1,120 @@
-document.querySelectorAll('.sidebar ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// MENU MOVIL
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+
+menuToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
 });
 
+// SCROLL SUAVE
 
-function updateThemeIconOnLoad() {
-    const themeIcon = document.getElementById('themeIcon');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    themeIcon.src = isDarkMode ? 'moon.png' : 'sunny.png';
-    themeIcon.classList.add('rotate');
-    setTimeout(() => themeIcon.classList.remove('rotate'), 500); 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+        sidebar.classList.remove("active");
+
+    });
+
+});
+// ACTIVE SIDEBAR LINK
+
+const navLinks = document.querySelectorAll(".sidebar nav a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.forEach(item => {
+            item.classList.remove("active-link");
+        });
+
+        link.classList.add("active-link");
+
+    });
+
+});
+
+// TYPEWRITER
+
+const text = "Ingeniero en Sistemas Computacionales";
+
+const typewriter = document.getElementById("typewriter");
+
+let i = 0;
+
+function typingEffect() {
+
+    if (i < text.length) {
+
+        typewriter.innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typingEffect, 100);
+
+    }
+
 }
 
+typingEffect();
 
-document.getElementById('toggleTheme').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    updateThemeIconOnLoad();
-});
+// REVEAL ANIMATION
 
-window.onload = updateThemeIconOnLoad;
+const reveals = document.querySelectorAll(".reveal");
 
-const sections = document.querySelectorAll('.main-content section');
+window.addEventListener("scroll", revealSections);
 
+function revealSections() {
 
-window.addEventListener('scroll', () => {
-  
-  const scrollPosition = window.scrollY;
+    reveals.forEach(section => {
 
+        const windowHeight = window.innerHeight;
 
-  sections.forEach((section) => {
-   
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
+        const revealTop = section.getBoundingClientRect().top;
 
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (revealTop < windowHeight - 100) {
 
-      section.classList.add('animate');
-    } else {
-      section.classList.remove('animate');
-    }
-  });
-});
+            section.classList.add("active");
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const text = "Ingeniero en Sistemas";
-    let i = 0;
-
-    const speed = 100;
-    const displayTime = 3500;
-    const hideTime = 1500;
-
-    const element = document.getElementById("typewriter-text");
-
-    function typeWriter() {
-
-        if (i < text.length) {
-
-            element.innerHTML += text.charAt(i);
-            i++;
-
-            setTimeout(typeWriter, speed);
-
-        } else {
-
-            setTimeout(hideText, displayTime);
         }
-    }
 
-    function hideText() {
+    });
 
-        element.innerHTML = '';
-        i = 0;
+}
 
-        setTimeout(typeWriter, hideTime);
-    }
+revealSections();
 
-    typeWriter();
+// DARK MODE
+
+const toggleTheme = document.getElementById("toggleTheme");
+
+toggleTheme.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
 });
 
+// CLOSE MENU MOBILE
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if(window.innerWidth < 768) {
+
+            sidebar.classList.remove("active");
+
+        }
+
+    });
+
+});

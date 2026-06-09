@@ -4,215 +4,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruben Castro Villegas</title>
+
+    <title>Rubén Castro | Portafolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 </head>
 
 <body>
-    <!-- Botón para cambiar el tema -->
-    <div class="theme-toggle">
-        <button id="toggleTheme">
-            <img id="themeIcon" src="sunny.png" alt="Cambiar tema" class="white-icon">
+
+    <!-- BOTONES -->
+    <div class="top-buttons">
+
+        <button id="toggleTheme" class="icon-btn">
+            🌙
         </button>
-    </div>
 
-    <div class="download-btn">
-        <a href="CVRubenCV.pdf" download>
-            <button id="downloadBtn">
-                <img src="pdfdwl.png" alt="Download CV" class="white-icon">
-            </button>
+        <a href="CVRubenCV.pdf" download class="icon-btn">
+            📁​
         </a>
-        
+
     </div>
 
+    <!-- MENU MOVIL -->
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
 
-
-    <!-- Contenedor principal -->
     <div class="container">
-        <!-- Barra lateral de navegación -->
-        <nav class="sidebar">
-            <img src="programmer.png" alt="Foto de perfil" class="profile-pic">
-            <ul>
-                <li><a href="#sobre-mi">Sobre mi</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#intereses">Intereses</a></li>
-                <li><a href="#cursos">Competencias</a></li>
-                <li><a href="#insignias">Certificaciones</a></li>
-                <li><a href="#referencias">Referencias</a></li>
 
-            </ul>
-        </nav>
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
 
-        <!-- Contenido principal -->
-        <div class="main-content">
-            <section id="sobre-mi">
-                <h1>Rubén Miguel Castro Villegas</h1>
-                <p>Guápiles | +506 8450-7930 | 2828rubencastro@gmail.com | Última actualización: 2/6/2026</p>
-                <div class="typewriter">
-                    <p id="typewriter-text"></p>
-                    <h1 class="typewriter" id="typewriter-text"></h1>
-                </div>
-                <p>Egresado de Ingeniería en Sistemas Computacionales (99% completado) con sólidos conocimientos en desarrollo web, bases de datos relacionales y soporte técnico. Capacidad de aprendizaje autónomo demostrada: dominio autodidacta de Python, HTML/CSS/JS y herramientas de red. Inglés avanzado, Visa americana vigente y Licencia B1. Busco incorporarme a un equipo donde aporte soluciones técnicas y continúe creciendo profesionalmente.</p>
-                <div class="social-links">
-                    <a target="_blank" href="https://www.linkedin.com/in/rub%C3%A9n-castro-villegas-97a643268/"><img
-                            src="linkedin.png" alt="LinkedIn"></a>
-                    <a target="_blank" href="https://github.com/MilloDEV"><img src="github.png" alt="GitHub"> </a>
-                    <a target="_blank" href="mailto:2828rubencastro@gmail.com"><img src="gmail.png" alt="Gmail"></a>
-                </div>
-            </section>
+            <div class="profile">
 
-            <section id="experiencia">
-                <h1>Experiencia</h1>
-                <h3>Lenguajes</h3>
-                <p>Java | Python | HTML | CSS | JS</p>
-                <p class="dates">Enero 2023 - Presente</p>
-                <h3>Microsoft Office</h3>
-                <p>Teams | Word | Excel | Power Point | Outlook | PowerBI</p>
-                <p class="dates">Enero 2017 - Presente</p>
-                <h3>Base de datos</h3>
-                <p>SQL | MySQL | Diseño relacional | Estandarización</p>
-                <p class="dates">Enero 2023 - Presente</p>
-                 <h3>Redes & Sistemas</h3>
-                <p>Cisco Packet Tracer | TCP/IP | VLANs| DHCP | Windows </p>
-                <p class="dates">Enero 2023 - Presente</p>
-                 <h3>Laboral</h3>
-                <p>Coordinador operativo Agroconsorcio Alvarado & Alvarado SRL </p>
-                <p class="dates">Octubre 2024 - Mayo 2026</p>
-            </section>
+                <img src="programmer.jpg" alt="Profile">
 
-            <section id="educacion">
-                <h1>Educación</h1>
-                <h3>Bachiller en educación media</h3>
-                <p>Colegio Bilingüe San Francisco de Asís</p>
-                <p class="dates">Enero 2017 - Diciembre 2022</p>
-                <h3>Bachiller en ingeniería de sistemas computacionales</h3>
-                <p>Universidad U Latina de Costa Rica</p>
-                <p class="dates">Enero 2023 - Presente</p>
-            </section>
+                <h2>Rubén Castro</h2>
 
-            <section id="habilidades">
-                <h1>Habilidades</h1>
-                <div class="habilidades">
-                    <img src="java.png" alt="Icono Java" class="habilidad-icono">
-                    <img src="html.png" alt="Icono HTML" class="habilidad-icono">
-                    <img src="css.png" alt="Icono CSS" class="habilidad-icono">
-                    <img src="cisco.png" alt="Icono Cisco" class="habilidad-icono">
-                    <img src="js.png" alt="Icono JS" class="habilidad-icono">
-                    <img src="apache.png" alt="Icono Apache" class="habilidad-icono">
-                    <img src="mysql.png" alt="Icono MySQL" class="habilidad-icono">
-                    <img src="windows.png" alt="Icono Windows" class="habilidad-icono">
-                    <img src="office.png" alt="Icono Office" class="habilidad-icono">
-                    <img src="excel.png" alt="Icono Excel" class="habilidad-icono">
-                    <img src="powerpoint.png" alt="Icono PowerPoint" class="habilidad-icono">
-                     <img src="POWERBI.png" alt="Icono PowerBI" class="habilidad-icono">
-                </div>
-                <div class="skills-message">
-                    <p><strong>Nota:</strong> Todas estas habilidades fueron desarrolladas a través de una
-                        combinación de investigación autodirigida, educación universitaria y la aplicación práctica
-                        de proyectos personales y académicos.</p>
-                </div>
-            </section>
+                <p>Ingeniero en Sistemas</p>
 
-            <section id="intereses">
-                <h1>Intereses</h1>
-                <p>Soy una persona motivada y apasionada por el aprendizaje, con un fuerte deseo de mejorar mis
-                    habilidades y conocimientos en el campo de la tecnología. Me entusiasma dedicar tiempo a proyectos
-                    informáticos y estoy dispuesto a aprender de todas las oportunidades que se me presenten. Como
-                    persona abierta y receptiva, estoy dispuesto a aprender nuevas habilidades y experiencias laborales
-                    que me permitan crecer profesionalmente. Me gusta establecer metas a corto y largo plazo, y trabajar
-                    hacia ellas con determinación y perseverancia, con el objetivo de alcanzar un crecimiento constante
-                    en mi carrera.</p>
-
-                <p>En mi tiempo libre, disfruto de una variedad de actividades. Me apasiona la música y disfruto
-                    escuchando diferentes géneros. También soy un entusiasta de los videojuegos, ya que me permiten
-                    explorar nuevos mundos y desafíos. Además, me gusta pasar tiempo al aire libre y explorar la
-                    naturaleza, lo que me ayuda a desconectar y recargar energías. Como alguien interesado en la
-                    tecnología, siempre estoy atento a las últimas novedades y tendencias en el sector, y me gusta estar
-                    conectado con profesionales y expertos a través de redes sociales especializadas.</p>
-            </section>
-
-            <section id="cursos">
-                <h1>Competencias</h1>
-                <ul class="course-list">
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Visa Americana vigente</strong>
-                    </li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Licencia B1</strong></li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Trabajo bajo presión</strong>
-                    </li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Comunicación asertiva</strong>
-                    </li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Potencial para proponer ideas
-                            innovadoras</strong></li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Capacidad de trabajar en
-                            ambientes multiculturales</strong></li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Liderazgo</strong></li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Inglés avanzado</strong></li>
-                    <li><img src="trophy.png" alt="Trofeo" class="trophy-icon"><strong>Vehiculo personal para movilizarme </strong></li>
-                </ul>
-            </section>
-
-            <section id="insignias">
-                <h1>Certificaciones</h1>
-                <ul class="course-list">
-                    <li>
-                        <img src="badge.png" alt="Trofeo" class="trophy-icon">
-                        <a href="https://openbadgefactory.com/v1/assertion/af6a97a5d7ebc292f1d79bb8930a3b89c0ac9b3e" target="_blank">
-                            <strong>Business Strategies for the Creative Entrepreneur</strong>
-                        </a>
-                        <img src="badge2cintana.png" alt="Trofeo" class="trophy-icon">
-                        <a href="https://openbadgefactory.com/v1/assertion/2d25499f30f331cd60c25fa595d74c41563b4620" target="_blank">
-                            <strong>Curiosity Catalyst: Fueling Innovation, Creativity, and Success </strong>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="referencias">
-    <h1>Referencias</h1>
-
-    <div class="references-container">
-
-        <div class="reference-card">
-            <div class="reference-info">
-                <h3>Ing. Didier Castro Parajeles</h3>
-                <p class="position">Gerente de Producción</p>
-                <p>Piñera Parismina</p>
-                <p>+506 8502-3431</p>
-                <p>dcastro@caribe.cr</p>
             </div>
-        </div>
 
-        <div class="reference-card">
-            <div class="reference-info">
-                <h3>Josué Serrano López</h3>
-                <p class="position">Supervisor de producción</p>
-                <p>Trobanex ltd</p>
-                <p>+506 84270339</p>
-                <p>Josueserra11@gmail.com</p>
-            </div>
-            
-        </div>
+            <nav>
+<nav>
 
-        <div class="reference-card">
-            <div class="reference-info">
-                <h3>Ing. Waldy Brenes Mena</h3>
-                <p class="position">Gerente Comercial Corporativo</p>
-                <p>Tilawa Agro</p>
-                <p>+506 8319-3523</p>
-                <p>wbrenes@tilawagroup.com</p>
-            </div>
-        
-        </div>
+    <a href="#sobre-mi">
+        <i class="fa-regular fa-user"></i>
+        Sobre mí
+    </a>
+
+    <a href="#experiencia">
+        <i class="fa-solid fa-briefcase"></i>
+        Experiencia
+    </a>
+
+    <a href="#educacion">
+        <i class="fa-solid fa-graduation-cap"></i>
+        Educación
+    </a>
+
+    <a href="#habilidades">
+        <i class="fa-solid fa-code"></i>
+        Habilidades
+    </a>
+
+    <a href="#intereses">
+        <i class="fa-regular fa-heart"></i>
+        Intereses
+    </a>
+
+    <a href="#competencias">
+        <i class="fa-regular fa-star"></i>
+        Competencias
+    </a>
+
+    <a href="#certificaciones">
+        <i class="fa-solid fa-shield-halved"></i>
+        Certificaciones
+    </a>
+
+    <a href="#referencias">
+        <i class="fa-solid fa-users"></i>
+        Referencias
+    </a>
+
+</nav>
+
+            </nav>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="main-content">
+
+            <!-- HERO -->
+            <section class="hero" id="sobre-mi">
+
+                <div class="hero-text">
+
+                    <h1>Rubén Miguel Castro Villegas</h1>
+
+                    <h2 id="typewriter"></h2>
+
+                    <div class="hero-info">
+
+    <span>
+        <i class="fa-solid fa-location-dot"></i>
+        Guápiles, Costa Rica
+    </span>
+
+    <span>
+        <i class="fa-solid fa-phone"></i>
+        +506 8450-7930
+    </span>
+
+    <span>
+        <i class="fa-solid fa-envelope"></i>
+        2828rubencastro@gmail.com
+    </span>
+
+</div>
+
+                    <p class="description">
+                       Egresado de Ingeniería en Sistemas Computacionales (99% completado) con conocimientos en desarrollo web, bases de datos, redes y soporte técnico. Destaco por el aprendizaje autónomo, la adaptabilidad y la resolución de problemas.
+
+He desarrollado proyectos en tecnologías como Python, Java, HTML, CSS, JavaScript y SQL, además de experiencia en coordinación operativa, control de inventarios y análisis de información con Excel y Power BI. Busco seguir creciendo profesionalmente aportando soluciones tecnológicas eficientes.
+
+                    </p>
+
+                    <div class="socials">
+
+    <a target="_blank"
+    href="https://www.linkedin.com/in/rub%C3%A9n-castro-villegas-97a643268/">
+
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+
+    </a>
+
+    <a target="_blank"
+    href="https://github.com/MilloDEV">
+
+        <i class="fa-brands fa-github"></i>
+        GitHub
+
+    </a>
+
+    <a href="mailto:2828rubencastro@gmail.com">
+
+        <i class="fa-solid fa-envelope"></i>
+        Gmail
+
+    </a>
+
+</div>
+
+                </div>
+
+            </section>
+
+            <!-- EXPERIENCIA -->
+            <section class="section reveal" id="experiencia">
+
+                <h2 class="section-title">Experiencia</h2>
+
+                <div class="card">
+
+                    <h3>Lenguajes</h3>
+                    <p>Java | Python | HTML | CSS | JavaScript</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Microsoft Office</h3>
+                    <p>Teams | Word | Excel | PowerPoint | Outlook | Power BI</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Base de Datos</h3>
+                    <p>SQL | MySQL | Diseño relacional | Estandarización</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Redes y Sistemas</h3>
+                    <p>Cisco Packet Tracer | TCP/IP | VLANs | DHCP | Windows</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Experiencia Laboral</h3>
+                    <p>Coordinador Operativo - Agroconsorcio Alvarado & Alvarado SRL</p>
+
+                </div>
+
+            </section>
+
+            <!-- EDUCACION -->
+           <section class="section reveal" id="educacion">
+
+    <h2 class="section-title">
+        Educación
+    </h2>
+
+    <div class="card">
+
+        <h3>
+            Bachiller en Educación Media
+        </h3>
+
+        <p>
+            Colegio Bilingüe San Francisco de Asís
+        </p>
+
+        <span class="date">
+            2018 - 2022
+        </span>
 
     </div>
+
+    <div class="card">
+
+        <h3>
+            Ingeniería en Sistemas Computacionales
+        </h3>
+
+        <p>
+            Universidad Latina de Costa Rica
+        </p>
+
+        <span class="date">
+            2023 - Actualidad (99% completado)
+        </span>
+
+    </div>
+
 </section>
 
+            <!-- HABILIDADES -->
+            <section class="section reveal" id="habilidades">
+
+                <h2 class="section-title">Habilidades</h2>
+
+                <div class="skills-grid">
+
+                    <img src="java.png">  
+                    <img src="apache.png"> 
+                    <img src="html.png">
+                    <img src="css.png">
+                    <img src="js.png">
+                    <img src="mysql.png">
+                    <img src="office.png">
+                    <img src="excel.png">
+                    <img src="powerpoint.png">
+                    <img src="windows.png">
+                    <img src="POWERBI.png">
+                    <img src="cisco.png">
+
+                </div>
+
+            </section>
+
+            <!-- INTERESES -->
+            <section class="section reveal" id="intereses">
+
+                <h2 class="section-title">Intereses</h2>
+
+                <div class="card">
+                    <p>
+                       Apasionado por la tecnología, el desarrollo web y el aprendizaje continuo. Disfruto trabajar en proyectos tecnológicos, explorar nuevas herramientas y fortalecer constantemente mis habilidades técnicas y profesionales. Me interesa el crecimiento dentro del área de sistemas, la innovación y la búsqueda de soluciones eficientes mediante la tecnología.
+
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- COMPETENCIAS -->
+            <section class="section reveal" id="competencias">
+
+                <h2 class="section-title">Competencias</h2>
+
+                <div class="tags">
+
+                    <span>Inglés avanzado</span>
+                    <span>Licencia B1</span>
+                    <span>Trabajo bajo presión</span>
+                    <span>Comunicación asertiva</span>
+                    <span>Liderazgo</span>
+                    <span>Visa Americana</span>
+
+                </div>
+
+            </section>
+
+            <!-- CERTIFICACIONES -->
+    <section class="section reveal" id="certificaciones">
+
+    <h2 class="section-title">
+        Certificaciones
+    </h2>
+
+    <!-- CERTIFICACION 1 -->
+
+    <div class="cert-card">
+
+        <img src="badge.png" alt="Certificación">
+
+        <div class="cert-content">
+
+            <h3>
+                Business Strategies for the Creative Entrepreneur
+            </h3>
+
+            <a target="_blank"
+            href="https://openbadgefactory.com/v1/assertion/af6a97a5d7ebc292f1d79bb8930a3b89c0ac9b3e">
+
+                Ver certificado
+
+            </a>
+
         </div>
+
+    </div>
+
+    <!-- CERTIFICACION 2 -->
+
+    <div class="cert-card">
+
+        <img src="badge2cintana.png" alt="Certificación">
+
+        <div class="cert-content">
+
+            <h3>
+                Curiosity Catalyst: Fueling Innovation
+            </h3>
+
+            <a target="_blank"
+            href="https://openbadgefactory.com/v1/assertion/2d25499f30f331cd60c25fa595d74c41563b4620">
+
+                Ver certificado
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+           <!-- REFERENCIAS -->
+
+<section class="section reveal" id="referencias">
+
+    <h2 class="section-title">
+        Referencias
+    </h2>
+
+    <div class="references">
+
+        <!-- REFERENCIA 1 -->
+
+        <div class="reference-card">
+
+            <h3>
+                Ing. Didier Castro Parajeles
+            </h3>
+
+            <p>
+                Gerente de Producción
+            </p>
+
+            <p>
+                Piñera Parismina
+            </p>
+
+            <div class="reference-contact">
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +506 8502-3431
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    dcastro@caribe.cr
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- REFERENCIA 2 -->
+
+        <div class="reference-card">
+
+            <h3>
+                Josué Serrano López
+            </h3>
+
+            <p>
+                Supervisor de Producción
+            </p>
+
+            <p>
+                Trobanex LTD
+            </p>
+
+            <div class="reference-contact">
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +506 8427-0339
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    Josueserra11@gmail.com
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- REFERENCIA 3 -->
+
+        <div class="reference-card">
+
+            <h3>
+                Ing. Waldy Brenes Mena
+            </h3>
+
+            <p>
+                Gerente Comercial Corporativo
+            </p>
+
+            <p>
+                Tilawa Agro
+            </p>
+
+            <div class="reference-contact">
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +506 8319-3523
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    wbrenes@tilawagroup.com
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
+
     </div>
 
     <script src="script.js"></script>
 
 </body>
-</html
+
+</html>
