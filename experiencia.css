@@ -1,0 +1,365 @@
+/* =========================================================
+   EXPERIENCIAS LABORALES
+   CSS EXCLUSIVO PARA LAS PÁGINAS DE EXPERIENCIA
+========================================================= */
+
+
+/* =========================================================
+   ETIQUETA "EXPERIENCIA LABORAL"
+========================================================= */
+
+.experience-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    color: #2563eb;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO DE EXPERIENCIA
+========================================================= */
+
+.experience-hero {
+    min-height: auto;
+}
+
+.experience-hero .hero-text h2 {
+    margin-top: -8px;
+    margin-bottom: 20px;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    color: #64748b;
+}
+
+
+/* =========================================================
+   TARJETA DE DETALLE
+========================================================= */
+
+.experience-detail-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+/* Icono */
+
+.detail-icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(37, 99, 235, 0.10);
+    color: #2563eb;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   LISTA DE FUNCIONES
+========================================================= */
+
+.experience-list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+    padding: 12px 0;
+
+    font-size: 0.95rem;
+    color: #334155;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.experience-list li:last-child {
+    border-bottom: none;
+}
+
+.experience-list li i {
+    margin-top: 4px;
+
+    color: #2563eb;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   HERRAMIENTAS / TAGS
+========================================================= */
+
+.tools-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.tools-tags span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+
+    color: #1d4ed8;
+
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.tools-tags span:hover {
+    background: rgba(37, 99, 235, 0.14);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOTIVO DE SALIDA
+========================================================= */
+
+.exit-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.exit-icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(37, 99, 235, 0.10);
+    color: #2563eb;
+
+    font-size: 1.1rem;
+}
+
+.exit-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 1.05rem;
+
+    color: #0f172a;
+}
+
+.exit-card p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER
+========================================================= */
+
+.back-section {
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 50px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 20px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.back-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.20);
+}
+
+.back-button i {
+    transition: transform 0.25s ease;
+}
+
+.back-button:hover i {
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE SECCIONES
+========================================================= */
+
+/* Por defecto el contenido SIEMPRE es visible */
+
+.experience-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cuando JS está funcionando, permite la animación */
+
+.experience-page.experience-animations .experience-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+/* Sección mostrada */
+
+.experience-page.experience-animations
+.experience-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   MODO OSCURO - EXPERIENCIAS
+========================================================= */
+
+.dark-mode {
+    background: #020617;
+    color: white;
+}
+
+.dark-mode .experience-card,
+.dark-mode .learning-item {
+    background: #0f172a;
+    color: white;
+}
+
+.dark-mode .experience-section-title {
+    color: white;
+}
+
+.dark-mode .experience-list li {
+    color: #cbd5e1;
+}
+
+.dark-mode .experience-hero .hero-text h2,
+.dark-mode .experience-company {
+    color: #94a3b8;
+}
+
+.dark-mode .experience-intro {
+    color: #cbd5e1;
+}
+
+.dark-mode .exit-card h3 {
+    color: white;
+}
+
+.dark-mode .exit-card p {
+    color: #cbd5e1;
+}
+
+.dark-mode .tools-tags span {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.25);
+    color: #60a5fa;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Tarjetas */
+
+    .experience-detail-card,
+    .exit-card {
+        flex-direction: column;
+    }
+
+
+    /* Título */
+
+    .experience-hero .hero-text h1 {
+        font-size: 2rem;
+    }
+
+
+    /* Empresa */
+
+    .experience-hero .hero-text h2 {
+        font-size: 1.05rem;
+    }
+
+
+    /* Funciones */
+
+    .experience-list li {
+        font-size: 0.88rem;
+    }
+
+
+    /* Herramientas */
+
+    .tools-tags span {
+        font-size: 0.78rem;
+    }
+
+
+    /* Botón volver */
+
+    .back-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

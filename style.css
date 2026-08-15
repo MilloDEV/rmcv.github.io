@@ -250,6 +250,60 @@ body {
     text-align: center;
 
 }
+.experience-card {
+    position: relative;
+}
+
+.experience-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(30, 64, 175, 0.10);
+}
+
+/* Fecha */
+.experience-date {
+    font-size: 0.82rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.experience-date i {
+    color: #2563eb;
+    font-size: 0.8rem;
+}
+
+/* Enlace */
+.experience-link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    color: #2563eb;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.experience-link i {
+    font-size: 0.72rem;
+    transition: transform 0.25s ease;
+}
+
+.experience-link:hover {
+    color: #1d4ed8;
+}
+
+.experience-link:hover i {
+    transform: translateX(4px);
+}
 
 .cert-content a {
 
@@ -832,5 +886,6 @@ body {
         grid-template-columns: 1fr;
 
     }
+    
 
 }

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>404 | Página no encontrada</title>
+
+    <meta name="description"
+          content="La página que buscas no existe o ya no está disponible.">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS DE EXPERIENCIAS -->
+    <link rel="stylesheet" href="experiencia.css">
+
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           PAGINA 404
+        ===================================================== */
+
+        .error-page {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            text-align: center;
+
+        }
+
+
+        .error-container {
+
+            max-width: 650px;
+
+            width: 100%;
+
+        }
+
+
+        /* NUMERO 404 */
+
+        .error-number {
+
+            font-size: clamp(7rem, 20vw, 12rem);
+
+            line-height: 1;
+
+            font-weight: 700;
+
+            color: #2563eb;
+
+            margin-bottom: 10px;
+
+            letter-spacing: -8px;
+
+        }
+
+
+        /* TITULO */
+
+        .error-container h1 {
+
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+
+            color: #0f172a;
+
+        }
+
+
+        /* TEXTO */
+
+        .error-container p {
+
+            max-width: 500px;
+
+            margin: 0 auto 30px;
+
+            color: #64748b;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* BOTON */
+
+        .error-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 13px 24px;
+
+            border-radius: 10px;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            transition: all 0.25s ease;
+
+        }
+
+
+        .error-button:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.20);
+
+        }
+
+
+        /* ICONO */
+
+        .error-icon {
+
+            font-size: 2.5rem;
+
+            color: #2563eb;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =====================================================
+           MODO OSCURO
+        ===================================================== */
+
+        .dark-mode .error-container h1 {
+
+            color: white;
+
+        }
+
+
+        .dark-mode .error-container p {
+
+            color: #94a3b8;
+
+        }
+
+
+        /* =====================================================
+           MOVIL
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .error-page {
+
+                padding: 20px;
+
+            }
+
+            .error-number {
+
+                letter-spacing: -5px;
+
+            }
+
+            .error-container h1 {
+
+                font-size: 1.6rem;
+
+            }
+
+            .error-container p {
+
+                font-size: 0.9rem;
+
+            }
+
+            .error-button {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="error-page">
+
+        <div class="error-container">
+
+            <div class="error-icon">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <div class="error-number">
+
+                404
+
+            </div>
+
+
+            <h1>
+
+                Página no encontrada
+
+            </h1>
+
+
+            <p>
+
+                La página que estás buscando no existe.
+
+            </p>
+
+
+            <a href="https://millodev.github.io/rmcv.github.io/"
+               class="error-button">
+
+                <i class="fa-solid fa-house"></i>
+
+                Volver al portafolio
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODO OSCURO
+    ===================================================== -->
+
+    <script>
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark-mode");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
